@@ -4,32 +4,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.FlowPane?>
 
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1">
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <FlowPane alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="flow-pane-styles">
-         <children>
+    <FlowPane alignment="BOTTOM_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="flow-pane-styles">
             <Label text="BOTTOM_RIGHT" />
             <Button mnemonicParsing="false" text="Button 1" />
             <Button mnemonicParsing="false" text="Button 2" />
             <Button mnemonicParsing="false" text="Button 3" />
-         </children>
       </FlowPane>
+
       <FlowPane alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="flow-pane-styles">
-         <children>
             <Label text="BOTTOM_LEFT" />
             <Button mnemonicParsing="false" text="Button 1" />
             <Button mnemonicParsing="false" text="Button 2" />
             <Button mnemonicParsing="false" text="Button 3" />
-         </children>
       </FlowPane>
+
       <FlowPane alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="flow-pane-styles">
-         <children>
             <Label text="CENTER" />
             <Button mnemonicParsing="false" text="Button 1" />
             <Button mnemonicParsing="false" text="Button 2" />
             <Button mnemonicParsing="false" text="Button 3" />
-         </children>
       </FlowPane>
-   </children>
+
 </FlowPane>
