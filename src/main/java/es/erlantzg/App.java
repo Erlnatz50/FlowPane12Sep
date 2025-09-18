@@ -19,11 +19,13 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try{
+            logger.debug("Intentando cargar el FXML: /fxml/flowpane12Sep.fxml");
             FXMLLoader loaded = new FXMLLoader(getClass().getResource("/fxml/flowpane12Sep.fxml"));
             Scene scene = new Scene(loaded.load(), 600, 100);
+            logger.info("FXML cargado correctamente");
 
             // Comprobar que el archivo de css existe y sino mostrar una alerta
-            logger.info("Buscar el archivo CSS");
+            logger.debug("Buscando el archivo CSS");
             var archivoCSS = getClass().getResource("/css/estilos.css");
             if(archivoCSS != null){
                 logger.info("CSS cargado correctamente");
@@ -40,12 +42,18 @@ public class App extends Application {
             stage.show();
 
         } catch (Exception e) {
-            logger.error("Error al intentar cargar la aplicación");
+            logger.error("Error al intentar cargar la aplicación", e);
             new Alert(Alert.AlertType.ERROR, "Error al intentar cargar la aplicación").showAndWait();
         }
     }
 
+    @Override
+    public void stop(){
+        logger.info("Aplicación finalizada correctamente");
+    }
+
     public static void main(String[] args) {
+        logger.info("Iniciando aplicacion JavaFX...");
         launch();
     }
 
